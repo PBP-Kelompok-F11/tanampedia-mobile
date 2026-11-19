@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:tanampedia/core/themes/app_theme.dart';
+import 'package:tanampedia/core/widgets/home_shell.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(body: Center(child: Text('Hello World!'))),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme.light,
+      home: const HomeShell(),
     );
   }
 }
