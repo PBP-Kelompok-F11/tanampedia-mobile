@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tanampedia/core/widgets/main_appbar.dart';
+import 'package:tanampedia/core/widgets/main_drawer.dart';
 import 'package:tanampedia/core/widgets/main_nav_bar.dart';
 import 'package:tanampedia/features/catalog/pages/catalog_page.dart';
 import 'package:tanampedia/features/forum/pages/forum_page.dart';
@@ -25,6 +27,8 @@ class _HomeShellState extends State<HomeShell> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const MainAppBar(),
+      drawer: const MainDrawer(),
       body: IndexedStack(index: _currentIndex, children: _pages),
       bottomNavigationBar: MainNavBar(
         currentIndex: _currentIndex,
