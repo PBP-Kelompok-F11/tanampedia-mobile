@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tanampedia/core/themes/app_theme.dart';
+import 'package:tanampedia/core/widgets/home_shell.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -8,7 +9,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: AppTheme.light,
-      home: const Scaffold(body: Center(child: Text('Hello World!'))),
+      home: const HomeShell(),
     );
   }
 }
